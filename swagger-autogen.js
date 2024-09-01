@@ -26,7 +26,8 @@ module.exports = function (args, endpointsFiles, data) {
         autoResponse: true,
         sortParameters: 'natural',   // in test
         sanitizeOutputData: false,
-        writeOutputFile: true
+        writeOutputFile: true,
+        ...(data || {})
     };
 
     if (args && endpointsFiles) {
